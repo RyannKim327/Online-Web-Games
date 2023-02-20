@@ -14,6 +14,9 @@
 	--padding-base: 0.25em;
 	--margin-base: 0.5em;
 	--border-radius-base: 0.2em;
+	--input-border: 2px #90aaff solid;
+	--input-radius: 0.25em;
+	--padding-input: 0.1em;
 }
 body{
 	background-color: var(--background-base);
@@ -24,4 +27,13 @@ body{
 	margin: var(--margin-base);
 	padding: var(--padding-base);
 	border-radius: var(--border-radius-base);
+	display: flex;
+	justify-items: center;
+}
+.form input{
+	border: var(--input-border);
+	border-radius: var(--input-radius);
+	color: var(--color-base);
+	font-family: 'Times New Roman', Times, serif;
+	padding: var(--padding-input);
 }
