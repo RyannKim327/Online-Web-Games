@@ -2,7 +2,8 @@
   "dependencies": {
     "body-parser": "^1.20.1",
     "cookie": "^0.5.0",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security"
   },
   "name": "online-web-games",
   "version": "0.0.1",

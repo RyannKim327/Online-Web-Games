@@ -2,10 +2,10 @@ const express = require("express")
 const body_parser = require("body-parser")
 const path = require("path")
 
-const backend = require("./backend/index")
-
 const app = express()
-const body = body_parser.urlencoded({ extended: false })
+const body = body_parser.urlencoded({ extended: true })
+
+const backend = require("./backend/index")
 
 let PORT = 3000 | 5000 | process.env.PORT
 
