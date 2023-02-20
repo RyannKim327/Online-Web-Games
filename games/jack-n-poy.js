@@ -14,6 +14,9 @@ async function send(choice){
 	}
 	await fetch("server/jacknpoy", {
 		"method": "POST",
+		"headers": {
+			"Content-Type": "application/json"
+		},
 		"body": JSON.stringify(json)
 	}).then(response => {
 		return response.json()
