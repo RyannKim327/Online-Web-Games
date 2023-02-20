@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	user-select: none;
+	outline: none;
+	box-sizing: 0;
+	background-color: transparent;
+}
+:root{
+	--background-base: #121220;
+	--color-base: #ffffff;
+	--background-form: #333350;
+	--padding-base: 0.25em;
+	--margin-base: 0.5em;
+	--border-radius-base: 0.2em;
+}
+body{
+	background-color: var(--background-base);
+	color: var(--color-base);
+}
+.form{
+	background-color: var(--background-form);
+	margin: var(--margin-base);
+	padding: var(--padding-base);
+	border-radius: var(--border-radius-base);
+}
