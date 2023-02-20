@@ -7,6 +7,7 @@ class elements{
 		}else{
 			this.element = document.getElementsByTagName(data)
 		}
+		return this.element
 	}
 	getElement(){
 		return this.element
