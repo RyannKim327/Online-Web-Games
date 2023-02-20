@@ -16,8 +16,10 @@
 	--border-radius-base: 0.2em;
 	--input-border: 2px #90aaff solid;
 	--input-radius: 0.25em;
-	--padding-input: 0.1em;
+	--padding-input: 0.25em;
 	--margin-initial: 1em;
+	--margin-input: 0.15em;
+	--color-placeholder: #dedede;
 }
 body{
 	background-color: var(--background-base);
@@ -36,7 +38,15 @@ body{
 	border-radius: var(--input-radius);
 	color: var(--color-base);
 	font-family: 'Times New Roman', Times, serif;
-	padding: var(--padding-input);
+	padding: 0 var(--padding-input);
+	margin: var(--margin-input) 0;
+}
+.form input::placeholder{
+	text-align: center;
+	color: var(--color-placeholder);
+}
+.form input[type='submit']{
+	width: 100%;
 }
 .form table caption{
 	margin: var(--margin-initial) 0;
