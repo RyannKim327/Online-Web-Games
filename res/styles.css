@@ -10,16 +10,28 @@
 :root{
 	--background-base: #121220;
 	--color-base: #ffffff;
+
 	--background-form: #333350;
 	--padding-base: 0.25em;
 	--margin-base: 0.5em;
 	--border-radius-base: 0.2em;
+	
 	--input-border: 2px #90aaff solid;
 	--input-radius: 0.25em;
 	--padding-input: 0.25em;
-	--margin-initial: 1em;
 	--margin-input: 0.15em;
 	--color-placeholder: #dedede;
+
+	--margin-initial: 1em;
+
+	--game-base-glow: 2px 2px 3px #90aaff,
+	-2px -2px 3px #90aaff,
+	2px -2px 3px #90aaff,
+	-2px 2px 3px #90aaff;
+	--game-base-padding: 1em;
+	--game-base-radius: 1em;
+	--game-padding: 0.5em;
+	--game-content-margin: 0.5em;
 }
 body{
 	background-color: var(--background-base);
@@ -50,4 +62,28 @@ body{
 }
 .form table caption{
 	margin: var(--margin-initial) 0;
+}
+
+/* Game bases */
+.game-base{
+	background-color: var(--background-form);
+	border: var(--input-border);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: var(--game-base-padding);
+	margin: var(--margin-base);
+	border-radius: var(--border-radius-base);
+}
+.game-base > #enemy, .game-base > #game-base-user > *{
+	box-shadow: var(--game-base-glow);
+	border-radius: var(--border-radius-base);
+	padding: var(--game-padding);
+	width: fit-content;
+	margin: var(--game-content-margin);
+}
+.game-base > #game-base-user{
+	display: flex;
+	flex-direction: row;
 }
