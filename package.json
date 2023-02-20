@@ -2,5 +2,26 @@
   "dependencies": {
     "body-parser": "^1.20.1",
     "express": "^4.18.2"
-  }
+  },
+  "name": "online-web-games",
+  "version": "0.0.1",
+  "description": "A simple gaming platform for fun.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyannKim327/Online-Web-Games.git"
+  },
+  "keywords": [
+    "old-games",
+    "childhood-games"
+  ],
+  "author": "RyannKim327",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RyannKim327/Online-Web-Games/issues"
+  },
+  "homepage": "https://github.com/RyannKim327/Online-Web-Games#readme"
 }
