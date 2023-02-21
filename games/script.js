@@ -47,20 +47,25 @@ class biskwit{
 async function checkUser(){
 	let cookie = new biskwit()
 	let str = cookie.getCookie("credentials")
-	console.log(JSON.parse(str))
+	if(str == "=" || str == ""){
+		location.href = "/.."
+	}
 	try{
-		let user = JSON.parse(str)
-		await fetch(`/checkCredentials?user=${user.username}`).then(response => {
-			let data = response.json()
+		let user = JSON.parse(str.substring(1))
+		console.log(user)
+		await fetch(`/checkCredentials?user=${user.username}`).then(async response => {
+			let data = await response.json()
+			console.log(data)
 			if(data.isExists){
 				cookie.setCookie("credentials", "")
-				location.href = "../"
+				location.href = "/.."
 			}
 		}).catch(error => {
 			setTimeout(checkUser, 1500)
 		})
 	}catch(error){
-		checkUser()
+		console.log(error)
+		setTimeout(checkUser, 5000);
 	}
 }
 

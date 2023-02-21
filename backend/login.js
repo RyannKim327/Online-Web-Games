@@ -30,7 +30,7 @@ module.exports = (user, pass) => {
 		fs.writeFileSync("data/users.json", JSON.stringify(data), "utf-8")
 		return {
 			statusCode: 200,
-			isExist: false,
+			isExist: true,
 			canLogin: true,
 			username: user,
 			userID: users.length

@@ -21,10 +21,10 @@ app.get("/", (req, res) => {
 app.get('/checkCredentials', (req, res) => {
 	let user = req.query.user
 	let data = JSON.parse(fs.readFileSync("data/users.json", "utf-8"))
-
-	return {
+	console.log(user)
+	res.send({
 		"isExists": data[user.toLowerCase()] == undefined
-	}
+	})
 })
 
 app.get('/jack-n-poy', (req, res) => {

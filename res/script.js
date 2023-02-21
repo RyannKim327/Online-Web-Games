@@ -78,5 +78,7 @@ new elements("#process").onclick = () => {
 }
 let cookie = new biskwit()
 if(cookie.getCookie("credentials")){
-	location.href = "games/"
+	if(cookie.getCookie("credentials") != "=" && cookie.getCookie("credentials") != ""){
+		location.href = "games/"
+	}
 }
