@@ -1,5 +1,5 @@
 const login = require("./login")
-const encrypt = require("./utils/encryptions")
+const encrypt = require("./../utils/encryptions")
 
 module.exports = (app, body) => {
 	app.post("/login", body, (req, res) => {

@@ -1,3 +1,4 @@
+const fs = require("fs")
 const express = require("express")
 const body_parser = require("body-parser")
 const path = require("path")
@@ -15,6 +16,15 @@ app.use('/games', express.static(path.join(`${__dirname}/games`)))
 
 app.get("/", (req, res) => {
 	res.sendFile(`${__dirname}/res/index.html`)
+})
+
+app.get('/checkCredentials', (req, res) => {
+	let user = req.query.user
+	let data = JSON.parse(fs.readFileSync("data/users.json", "utf-8"))
+
+	return {
+		"isExists": data[user.toLowerCase()] == undefined
+	}
 })
 
 app.get('/jack-n-poy', (req, res) => {
