@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	<p>Welcome</p>
-</body>
-<script src="script.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Game lists</title>
+		<link rel="stylesheet" href="../res/styles.css">
+	</head>
+	<body>
+		<div class="game-base">
+			<h3>MPOP Games Lists</h3>
+			<ol class="game-lists">
+				<li onclick="goto('jack-n-poy')">Jack n Poy</li>
+				<li onclick="goto('guess-the-word')">Guess the word</li>
+			</ol>
+		</div>
+	</body>
+	<script src="script.js"></script>
+	<script>
+		function goto(url=""){
+			location.href = `../${url}`
+		}
+	</script>
 </html>

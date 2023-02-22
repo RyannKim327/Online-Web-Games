@@ -20,11 +20,21 @@ app.get("/", (req, res) => {
 
 app.get('/checkCredentials', (req, res) => {
 	let user = req.query.user
+	let room = req.query.room.toLowerCase()
+	let user_lowered = user.toLowerCase()
 	let data = JSON.parse(fs.readFileSync("data/users.json", "utf-8"))
-	console.log(user)
-	res.send({
-		"isExists": data[user.toLowerCase()] == undefined
-	})
+	let rooms = JSON.parse(fs.readFileSync("data/room.json", "utf-8"))
+	if(data[user.toLowerCase()] == undefined){
+		rooms[room] = rooms[room].replace(`${user_lowered}, `, "")
+		res.send({
+			"isNotExists": true
+		})
+	}else{
+		rooms[room] += `${user_lowered}, `
+		res.send({
+			"isNotExists": false
+		})
+	}
 })
 
 app.get('/jack-n-poy', (req, res) => {

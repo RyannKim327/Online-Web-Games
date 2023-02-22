@@ -42,22 +42,29 @@ class biskwit{
 		}
 		return ""
 	}
+	clearCookie(__name__){
+		const date = new Date()
+		const data = ""
+		date.setTime(date.getTime() + 100)
+		document.cookie = `${__name__}=${data};expires=${date.toUTCString()};path=/`
+	}
 }
 
 async function checkUser(){
 	let cookie = new biskwit()
 	let str = cookie.getCookie("credentials")
+	let room = location.href.split("/")[3]
 	if(str == "=" || str == ""){
 		location.href = "/.."
 	}
 	try{
 		let user = JSON.parse(str.substring(1))
 		console.log(user)
-		await fetch(`/checkCredentials?user=${user.username}`).then(async response => {
+		await fetch(`/checkCredentials?user=${user.username}&room=${room}`).then(async response => {
 			let data = await response.json()
 			console.log(data)
-			if(data.isExists){
-				cookie.setCookie("credentials", "")
+			if(data.isNotExists){
+				cookie.clearCookie("credentials")
 				location.href = "/.."
 			}
 		}).catch(error => {

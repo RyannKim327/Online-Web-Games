@@ -32,6 +32,8 @@
 	--game-base-radius: 1em;
 	--game-padding: 0.5em;
 	--game-content-margin: 0.5em;
+
+	--game-lists-top: 1em;
 }
 body{
 	background-color: var(--background-base);
@@ -86,4 +88,10 @@ body{
 .game-base > #game-base-user{
 	display: flex;
 	flex-direction: row;
+}
+.game-lists{
+	margin-top: var(--game-lists-top);
+}
+.game-lists li{
+	cursor: pointer;
 }
