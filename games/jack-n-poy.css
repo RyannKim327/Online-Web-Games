@@ -1,0 +1,38 @@
+.hand{
+	animation: roll 3s infinite linear;
+}
+
+@keyframes roll{
+	0%{
+		transform: rotate(0deg);
+	}
+	10%{
+		transform: rotate(-45.0deg);
+	}
+	25%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(-45.0deg);
+	}
+	75%{
+		transform: rotate(0deg);
+	}
+}
+@-webkit-keyframes roll{
+	0%{
+		transform: rotate(0deg);
+	}
+	10%{
+		transform: rotate(-45.0deg);
+	}
+	25%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(-45.0deg);
+	}
+	75%{
+		transform: rotate(0deg);
+	}
+}
