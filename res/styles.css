@@ -80,7 +80,7 @@ body {
 	border-radius: var(--border-radius-base);
 }
 
-.game-base > #enemy,
+.game-base > .game-field > #enemy,
 .game-base > .game-field > #game-base-user > * {
 	box-shadow: var(--game-base-glow);
 	border-radius: var(--border-radius-base);
