@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Jack N Poy</title>
-		<link rel="stylesheet" href="../res/styles.css">
-		<link rel="stylesheet" href="jack-n-poy.css">
-	</head>
-	<body>
-		<div class="game-base jack-n-poy">
-			<h3>Jack n Poy</h3>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jack N Poy</title>
+	<link rel="stylesheet" href="../res/styles.css">
+	<link rel="stylesheet" href="games/jack-n-poy.css">
+</head>
+
+<body>
+	<div class="game-base jack-n-poy">
+		<h3>Jack n Poy</h3>
+		<div class="game-field">
 			<label id="enemy">Pic</label>
 			<div id="game-base-user">
-				<label class="hand" id="jack-n-poy-rock"><i style="transform: rotate(90.0deg);" class="fa-solid fa-hand-back-fist"></i></label>
-				<label class="hand" id="jack-n-poy-paper"><i style="transform: rotate(90.0deg);" class="fa-solid fa-hand"></i></label>
-				<label class="hand" id="jack-n-poy-scissor"><i style="transform: scaleX(-1);" class="fa-solid fa-hand-scissors"></i></label>
+				<span class="hand" id="jack-n-poy-rock"><i style="transform: rotate(90.0deg);" class="fa-solid fa-hand-back-fist"></i></span>
+				<span class="hand" id="jack-n-poy-paper"><i style="transform: rotate(90.0deg);" class="fa-solid fa-hand"></i></span>
+				<span class="hand" id="jack-n-poy-scissor"><i style="transform: scaleX(-1);" class="fa-solid fa-hand-scissors"></i></span>
 			</div>
 		</div>
-	</body>
-	<script src="games/script.js"></script>
-	<script src="games/jack-n-poy.js"></script>
+	</div>
+</body>
+<script src="games/script.js"></script>
+<script src="games/jack-n-poy.js"></script>
+
 </html>

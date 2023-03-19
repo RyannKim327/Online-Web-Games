@@ -1,4 +1,4 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -7,39 +7,34 @@
 	box-sizing: 0;
 	background-color: transparent;
 }
-:root{
+
+:root {
 	--background-base: #121220;
 	--color-base: #ffffff;
-
 	--background-form: #333350;
 	--padding-base: 0.25em;
 	--margin-base: 0.5em;
 	--border-radius-base: 0.2em;
-	
 	--input-border: 2px #90aaff solid;
 	--input-radius: 0.25em;
 	--padding-input: 0.25em;
 	--margin-input: 0.15em;
 	--color-placeholder: #dedede;
-
 	--margin-initial: 1em;
-
-	--game-base-glow: 2px 2px 3px #90aaff,
-	-2px -2px 3px #90aaff,
-	2px -2px 3px #90aaff,
-	-2px 2px 3px #90aaff;
+	--game-base-glow: 2px 2px 3px #90aaff, -2px -2px 3px #90aaff, 2px -2px 3px #90aaff, -2px 2px 3px #90aaff;
 	--game-base-padding: 1em;
 	--game-base-radius: 1em;
 	--game-padding: 0.5em;
 	--game-content-margin: 0.5em;
-
 	--game-lists-top: 1em;
 }
-body{
+
+body {
 	background-color: var(--background-base);
 	color: var(--color-base);
 }
-.form{
+
+.form {
 	background-color: var(--background-form);
 	margin: var(--margin-base);
 	padding: var(--padding-base);
@@ -47,7 +42,8 @@ body{
 	display: flex;
 	justify-content: center;
 }
-.form input{
+
+.form input {
 	border: var(--input-border);
 	border-radius: var(--input-radius);
 	color: var(--color-base);
@@ -55,19 +51,24 @@ body{
 	padding: 0 var(--padding-input);
 	margin: var(--margin-input) 0;
 }
-.form input::placeholder{
+
+.form input::placeholder {
 	text-align: center;
 	color: var(--color-placeholder);
 }
-.form input[type='submit']{
+
+.form input[type='submit'] {
 	width: 100%;
 }
-.form table caption{
+
+.form table caption {
 	margin: var(--margin-initial) 0;
 }
 
+
 /* Game bases */
-.game-base{
+
+.game-base {
 	background-color: var(--background-form);
 	border: var(--input-border);
 	display: flex;
@@ -78,20 +79,25 @@ body{
 	margin: var(--margin-base);
 	border-radius: var(--border-radius-base);
 }
-.game-base > #enemy, .game-base > #game-base-user > *{
+
+.game-base > #enemy,
+.game-base > .game-field > #game-base-user > * {
 	box-shadow: var(--game-base-glow);
 	border-radius: var(--border-radius-base);
 	padding: var(--game-padding);
 	width: fit-content;
 	margin: var(--game-content-margin);
 }
-.game-base > #game-base-user{
+
+.game-base > .game-field > #game-base-user {
 	display: flex;
 	flex-direction: row;
 }
-.game-lists{
+
+.game-lists {
 	margin-top: var(--game-lists-top);
 }
-.game-lists li{
+
+.game-lists li {
 	cursor: pointer;
 }
