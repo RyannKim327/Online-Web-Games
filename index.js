@@ -24,20 +24,20 @@ app.get('/checkCredentials', (req, res) => {
 	let user_lowered = user.toLowerCase()
 	let data = JSON.parse(fs.readFileSync("data/users.json", "utf-8"))
 	let rooms = JSON.parse(fs.readFileSync("data/room.json", "utf-8"))
-	let split_room = rooms[room].split(", ")
+	let split_room = rooms['room'].split(", ")
 	let others = Object.keys(rooms)
 	for(let o in others){
 		let other = others[o]
-		rooms[other] = rooms[room].replace(`__${user_lowered}, `, "")
+		rooms[other] = rooms['room'].replace(`__${user_lowered}, `, "")
 	}
 	if(data[user.toLowerCase()] == undefined){
-		rooms[room] = rooms[room].replace(`__${user_lowered}, `, "")
+		rooms['room'] = rooms['room'].replace(`__${user_lowered}, `, "")
 		res.send({
 			"isNotExists": true
 		})
 	}else{
 		if(!split_room.includes(`__${user_lowered}`)){
-			rooms[room] += `__${user_lowered}, `
+			rooms['room'] += `__${user_lowered}, `
 		}
 		res.send({
 			"isNotExists": false
